@@ -1,0 +1,11 @@
+{
+  "author": "mnaoumov",
+  "authorUrl": "https://github.com/mnaoumov/",
+  "description": "Renders address properties as live map links when a note is read, without storing anything in the note.",
+  "fundingUrl": "https://www.buymeacoffee.com/mnaoumov",
+  "id": "address-map-links",
+  "isDesktopOnly": false,
+  "minAppVersion": "1.14.5",
+  "name": "Address Map Links",
+  "version": "0.0.0"
+}
