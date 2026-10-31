@@ -1,3 +1,8 @@
+import { MapProvider } from './map-provider.ts';
+
 export class PluginSettings {
-  public textSetting = 'defaultText';
+  /**
+   * Which map service an address link opens.
+   */
+  public mapProvider = MapProvider.GoogleMaps;
 }

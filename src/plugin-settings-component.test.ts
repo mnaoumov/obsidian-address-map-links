@@ -9,6 +9,7 @@ import {
   it
 } from 'vitest';
 
+import { MapProvider } from './map-provider.ts';
 import { PluginSettingsComponent } from './plugin-settings-component.ts';
 import { PluginSettings } from './plugin-settings.ts';
 
@@ -22,9 +23,9 @@ describe('PluginSettingsComponent', () => {
   // This drives the component through the lifecycle Obsidian does: `load()` reads `data.json`, and a
   // Value the user saved there has to win over the class default.
   it('loads a saved setting from data.json over its default', async () => {
-    const component = createComponent({ textSetting: 'Saved text' });
+    const component = createComponent({ mapProvider: MapProvider.OpenStreetMap });
     await component.loadWithPromises();
-    expect(component.settings.textSetting).toBe('Saved text');
+    expect(component.settings.mapProvider).toBe(MapProvider.OpenStreetMap);
   });
 });
 

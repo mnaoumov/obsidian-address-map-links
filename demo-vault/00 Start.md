@@ -2,7 +2,7 @@
 
 This is an [Obsidian](https://obsidian.md/) vault that documents the [Address Map Links](https://github.com/mnaoumov/obsidian-address-map-links/) plugin by demonstrating it. Every feature has a note that says what it does and why you would want it, and a button you can press to watch it happen.
 
-Renders address properties as live map links when a note is read, without storing anything in the note.
+`Address Map Links` renders a note's address properties as clickable map links when the note is read, in Reading view and Live Preview. Nothing is written into the note, so the links always follow the current property values.
 
 ## Your first minute
 
@@ -10,20 +10,20 @@ Below this paragraph is a **code button** — a captioned rectangle. It is not a
 
 ```code-button
 ---
-caption: Run the Sample command
+caption: Open the sample person in Reading view
 ---
-require('/demoSetup.ts').runSampleCommand(app);
+await require('/demoSetup.ts').openSamplePerson(app, 'preview');
 ```
 
-A notice should have appeared in the top-right corner. That is the plugin's `Sample` command running — the same thing you get from **`Address Map Links`: Sample** in the Command Palette (`Ctrl+P` / `Cmd+P`).
+Under the note's properties you now see two lines, **Work** and **Home**, each a link that opens the address in Google Maps.
 
-Every button in this vault also states its **manual equivalent**, so you learn the real steps rather than depending on the buttons.
+Every button in this vault also states its **manual equivalent**, so you learn the real steps rather than depending on the buttons. This one is: open [Ada Example](<./Materials/01 Address links/Ada Example.md>).
 
 ## Features
 
 | Note | What it covers |
 | --- | --- |
-| [01 Sample commands](<./01 Sample commands.md>) | The commands the plugin adds, and how to run them. |
+| [01 Address links](<./01 Address links.md>) | The address properties the plugin reads, and the links it shows for them. |
 | [02 Settings](<./02 Settings.md>) | Every setting, by the key it is stored under in `data.json`. |
 
 ## Materials

@@ -1,5 +1,4 @@
 /**
- * You can remove this file if you don't need any styles
  * See default library styles: https://github.com/mnaoumov/obsidian-lib/blob/main/src/styles/main.scss
  * See available library css classes: https://github.com/mnaoumov/obsidian-lib/blob/main/src/css-class.ts
  */
@@ -8,9 +7,27 @@
   /* Override library styles */
 }
 
-/* The word-count widget the sample editor extension renders. Styled here rather than through
-   `element.style`, so a theme can restyle it. */
-.cm-sample-word-count {
-  font-size: 0.85em;
-  opacity: 0.5;
+/* The map links under a note's properties. */
+.address-map-links-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2-1);
+  margin-block: var(--size-4-2);
+  font-size: var(--metadata-input-font-size, var(--font-smaller));
+}
+
+.address-map-links-item {
+  display: flex;
+  gap: var(--size-4-2);
+  align-items: baseline;
+}
+
+.address-map-links-label {
+  flex-shrink: 0;
+  color: var(--metadata-label-text-color, var(--text-muted));
+}
+
+/* Source mode shows the frontmatter as text, so the links stay with Live Preview and Reading view. */
+.markdown-source-view:not(.is-live-preview) .address-map-links-block {
+  display: none;
 }
