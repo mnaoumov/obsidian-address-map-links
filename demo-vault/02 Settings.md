@@ -6,35 +6,31 @@ Find them in Obsidian under **Settings → Community plugins → `Address Map Li
 
 ## General
 
-- `textSetting`
-  - free text, shown in the settings tab as **Text setting name**. The scaffolded sample setting; nothing reads it yet.
+- `mapProvider`
+  - the map service an address link opens, shown in the settings tab as **Map provider**.
+  - `googleMaps` (the default) opens a Google Maps search, which Android hands to the Maps app.
+  - `openStreetMap` opens an OpenStreetMap search in the browser.
 
 ## Try it
 
-Change the setting without leaving this note. The change applies live — the plugin's settings component picks it up, so there is no reload.
+Change the setting without leaving this note. The change applies live — every open note's links are rebuilt, so there is no reload.
 
 ```code-button
 ---
-caption: Set textSetting to "changed by the demo"
+caption: Set mapProvider to OpenStreetMap
 ---
-await require('/demoSetup.ts').setTextSetting(app, 'changed by the demo');
+await require('/demoSetup.ts').setMapProvider(app, 'openStreetMap');
 ```
 
-Manual equivalent: type the same value into **Text setting name** in the settings tab.
+Manual equivalent: pick **OpenStreetMap** under **Map provider** in the settings tab.
 
-Open the settings tab now and the field shows the new value. When you are done, put it back:
+Open [Ada Example](<./Materials/01 Address links/Ada Example.md>) now and hover a link: it points at `openstreetmap.org`. When you are done, put it back:
 
 ```code-button
 ---
-caption: Reset textSetting to its default
+caption: Reset mapProvider to Google Maps
 ---
-await require('/demoSetup.ts').resetTextSetting(app);
+await require('/demoSetup.ts').setMapProvider(app, 'googleMaps');
 ```
 
-Manual equivalent: type `defaultText` back into the field.
-
-## Adding your own
-
-Settings are declared as plain properties on the `PluginSettings` class in `src/plugin-settings.ts`; the property's initial value **is** its default. `src/plugin-settings-tab.ts` renders one row per setting, and `src/plugin-settings-component.ts` is where migrations and validators go.
-
-When you add one, add it to this note too. The demo-vault coverage suite can be told to fail the build when a setting is documented nowhere — see the commented reflection spec in `src/demo-vault.no-app.integration.test.ts`.
+Manual equivalent: pick **Google Maps** again.

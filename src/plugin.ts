@@ -1,13 +1,13 @@
-import type { Editor } from 'obsidian';
-
 import { OpenBugReportCommandHandler } from '@mnaoumov/obsidian-lib/command-handlers/open-bug-report-command-handler';
 import { OpenDemoVaultCommandHandler } from '@mnaoumov/obsidian-lib/command-handlers/open-demo-vault-command-handler';
 import { PluginSettingsTabComponent } from '@mnaoumov/obsidian-lib/components/plugin-settings-tab-component';
 import { PluginDataHandler } from '@mnaoumov/obsidian-lib/data-handler';
 import { PluginBase } from '@mnaoumov/obsidian-lib/plugin/plugin';
 import { PluginEventSourceImpl } from '@mnaoumov/obsidian-lib/plugin/plugin-event-source';
-import { Notice } from 'obsidian';
 
+import type { AddressMapLinksSettings } from './address/address-map-links-component.ts';
+
+import { AddressMapLinksComponent } from './address/address-map-links-component.ts';
 import { PluginSettingsComponent } from './plugin-settings-component.ts';
 import { PluginSettingsTab } from './plugin-settings-tab.ts';
 
@@ -31,17 +31,22 @@ export class Plugin extends PluginBase {
       })
     );
 
-    this.addCommand({
-      callback: this.runSampleCommand.bind(this),
-      id: 'sample',
-      name: 'Sample'
-    });
+    const addressMapLinksComponent = this.addChild(
+      new AddressMapLinksComponent({
+        app: this.app,
+        getSettings: (): AddressMapLinksSettings => pluginSettingsComponent.settings
+      })
+    );
 
-    this.addCommand({
-      editorCallback: this.runSampleEditorCommand.bind(this),
-      id: 'sample-editor',
-      name: 'Sample editor'
-    });
+    // A changed map provider changes every link, so the open notes follow at once.
+    for (const eventName of ['loadSettings', 'saveSettings'] as const) {
+      const eventRef = pluginSettingsComponent.on(eventName, () => {
+        addressMapLinksComponent.refresh();
+      });
+      this.register(() => {
+        pluginSettingsComponent.offref(eventRef);
+      });
+    }
 
     // `OpenDemoVaultCommandHandler` is what makes the README's first demo-vault route real: it downloads
     // The `<plugin-id>-demo-vault.zip` attached to the GitHub release and opens it as a vault in
@@ -60,13 +65,5 @@ export class Plugin extends PluginBase {
         pluginVersion: this.manifest.version
       })
     ]);
-  }
-
-  private runSampleCommand(): void {
-    new Notice('Sample command');
-  }
-
-  private runSampleEditorCommand(editor: Editor): void {
-    editor.replaceSelection('Sample Editor Command');
   }
 }
