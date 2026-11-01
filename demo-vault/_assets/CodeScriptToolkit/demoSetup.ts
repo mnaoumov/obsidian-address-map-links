@@ -10,6 +10,7 @@ import { Notice } from 'obsidian';
 const PLUGIN_ID = 'address-map-links';
 
 const SAMPLE_PERSON_PATH = 'Materials/01 Address links/Ada Example.md';
+const SECOND_SAMPLE_PERSON_PATH = 'Materials/01 Address links/Bruno Example.md';
 
 /**
  * Opens the sample person note, whose properties hold a work and a home address.
@@ -19,12 +20,19 @@ const SAMPLE_PERSON_PATH = 'Materials/01 Address links/Ada Example.md';
  * @param mode - `preview` for Reading view, `source` for Live Preview.
  */
 export async function openSamplePerson(app: App, mode: 'preview' | 'source'): Promise<void> {
-  const file = app.vault.getFileByPath(SAMPLE_PERSON_PATH);
-  if (!file) {
-    new Notice(`Could not find ${SAMPLE_PERSON_PATH}.`);
-    return;
-  }
-  await app.workspace.getLeaf(false).openFile(file, { state: { mode, source: false } });
+  await openNote(app, SAMPLE_PERSON_PATH, mode);
+}
+
+/**
+ * Opens the second sample person note, whose properties hold an unresolved link, a custom address type, a
+ * street-only address and a text `*Address` property that is not an address.
+ *
+ * Manual equivalent: open `Materials/01 Address links/Bruno Example.md`.
+ *
+ * @param mode - `preview` for Reading view, `source` for Live Preview.
+ */
+export async function openSecondSamplePerson(app: App, mode: 'preview' | 'source'): Promise<void> {
+  await openNote(app, SECOND_SAMPLE_PERSON_PATH, mode);
 }
 
 /**
@@ -41,4 +49,13 @@ export async function openSamplePerson(app: App, mode: 'preview' | 'source'): Pr
 export async function setMapProvider(app: App, mapProvider: 'googleMaps' | 'openStreetMap'): Promise<void> {
   await configureCommunityPlugin({ app, pluginId: PLUGIN_ID, settings: { mapProvider } });
   new Notice(`mapProvider is now "${mapProvider}". It is live -- no reload needed.`);
+}
+
+async function openNote(app: App, path: string, mode: 'preview' | 'source'): Promise<void> {
+  const file = app.vault.getFileByPath(path);
+  if (!file) {
+    new Notice(`Could not find ${path}.`);
+    return;
+  }
+  await app.workspace.getLeaf(false).openFile(file, { state: { mode, source: false } });
 }

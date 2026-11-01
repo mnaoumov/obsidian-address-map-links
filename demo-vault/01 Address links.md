@@ -35,6 +35,24 @@ Manual equivalent: open `Ada Example` and switch to Live Preview (`Ctrl+E` / `Cm
 
 Click a link: it opens in your browser on desktop, and in the Maps app on Android.
 
+## Every other shape
+
+[Bruno Example](<./Materials/01 Address links/Bruno Example.md>) shows the rest:
+
+- a `homeAddress` whose city links to `Porto`, a note that does not exist, so the link reads `Porto`;
+- a `holidayHomeAddress`, a type of your own, labelled `Holiday home`;
+- a `studioAddress` with only a street;
+- an `emailAddress` that holds text, not an object, so it is not an address and gets no link.
+
+```code-button
+---
+caption: Open the second sample person in Reading view
+---
+await require('/demoSetup.ts').openSecondSamplePerson(app, 'preview');
+```
+
+Manual equivalent: open `Bruno Example`.
+
 ## Nothing is stored
 
 Change a property, and the link follows as soon as Obsidian re-reads the note. Rename a place note, and Obsidian updates the links in every address that points to it, so the map link follows too. Disable the plugin, and the note is still plain, readable properties.
