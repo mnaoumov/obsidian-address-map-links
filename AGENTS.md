@@ -29,7 +29,7 @@ The repo was generated on 2026-10-29 with `create-obsidian-plugin` (preset `all-
 
 **Tests:** unit tests at 100% coverage, and `src/address/address-map-links.cross-platform.integration.test.ts` drives Live Preview, the click, a property edit, Reading view, the provider setting and the way back, on desktop and Android.
 
-**Not yet:** the public repo, the README's prior-art table and screenshots, the release and the directory listing.
+**Not yet:** the README's prior-art table and screenshots, the release and the directory listing.
 
 ## Design
 
