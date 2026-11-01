@@ -25,11 +25,13 @@ The repo was generated on 2026-10-29 with `create-obsidian-plugin` (preset `all-
 
 **Built: the address links.** `src/address/address.ts` reads a note's addresses from its frontmatter and indexed frontmatter links (pure, no `App`). `src/map-provider.ts` builds the URL for each provider. `src/address/address-map-links-component.ts` puts one block of links (`.address-map-links-block`) right after the properties of every open `MarkdownView` and keeps it current. The `mapProvider` setting picks the provider. The scaffold's sample commands and sample setting are gone.
 
-**Built: the demo vault.** `01 Address links` shows the shape and the links on `Materials/01 Address links/Ada Example.md`, `02 Settings` the provider. The demo-vault coverage suite checks every `PluginSettings` field is documented.
+**Built: the demo vault.** `01 Address links` shows the shape and the links on `Materials/01 Address links/Ada Example.md`, and every other shape (an unresolved place link, a custom `<type>Address`, a street alone, a text `*Address` property that is ignored) on `Bruno Example.md`; `02 Settings` the provider. The demo-vault coverage suite checks every `PluginSettings` field is documented.
+
+**Built: the README and the store screenshots.** `npm run capture:screenshots` writes three desktop and three mobile frames to `images/screenshots/` from the demo vault: Ada Example in Live Preview, Bruno Example in Reading view, and the settings tab. The Android leg runs on the `obsidian_screenshots` AVD (900x1600).
 
 **Tests:** unit tests at 100% coverage, and `src/address/address-map-links.cross-platform.integration.test.ts` drives Live Preview, the click, a property edit, Reading view, the provider setting and the way back, on desktop and Android.
 
-**Not yet:** the README's prior-art table and screenshots, the release and the directory listing.
+**Not yet:** the first release and the directory listing.
 
 ## Design
 
