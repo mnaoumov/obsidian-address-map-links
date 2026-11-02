@@ -51,7 +51,7 @@ The Properties panel does not edit an object value. Edit addresses in Source mod
 
 ## See also
 
-[My other Obsidian resources](https://github.com/mnaoumov/obsidian-resources)
+[My other Obsidian resources](https://mnaoumov.dev/obsidian/)
 
 | Plugin | Features | How `Address Map Links` differs |
 | --- | --- | --- |
