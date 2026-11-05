@@ -33,7 +33,7 @@ The repo was generated on 2026-10-29 with `create-obsidian-plugin` (preset `all-
 
 **Released: 1.0.0** on 2026-11-04, with `minAppVersion` 1.15.0. The README links `CHANGELOG.md`.
 
-**Not yet:** the directory listing.
+**Listed** in the community directory as `address-map-links` since 2026-11-05. The automated review of 1.0.0 is Satisfactory: the only findings are the `fs` and Electron IPC warnings from the demo-vault opener `@mnaoumov/obsidian-lib` bundles into every plugin, and the extra demo-vault zip release asset, both expected.
 
 ## Design
 
