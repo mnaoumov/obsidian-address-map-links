@@ -108,7 +108,10 @@ describe('Plugin', () => {
     // The settings component's own listeners, added when it loads, before the links component exists, are its
     // Own business.
     const componentLoadOrder = ensureNonNullable(componentOnloadSpy.mock.invocationCallOrder[0]);
-    const listenerIndices = onSpy.mock.invocationCallOrder.flatMap((order, index) => order > componentLoadOrder ? [index] : []);
+    const listenerIndices = onSpy.mock.invocationCallOrder
+      .map((order, index) => ({ index, order }))
+      .filter(({ order }) => order > componentLoadOrder)
+      .map(({ index }) => index);
     expect(listenerIndices.map((index) => onSpy.mock.calls[index]?.[0])).toStrictEqual(['loadSettings', 'saveSettings']);
     const settingsEventRefs = listenerIndices.map((index): unknown => onSpy.mock.results[index]?.value);
     expect(offrefSpy).not.toHaveBeenCalled();
