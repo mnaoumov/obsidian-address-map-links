@@ -1,6 +1,6 @@
 {
   "name": "address-map-links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Renders address properties as live map links when a note is read, without storing anything in the note.",
   "type": "module",
   "main": "main.js",

@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 1.0.1
+
+This release has 1 fix and 2 documentation changes. 1 maintenance commit (tests, build, CI, refactoring, dependencies) is not listed.
+
+### Fixed
+
+- **deps:** override katex and moment past their audit advisories
+
+### Documentation
+
+- link the community directory listing
+- link the changelog from the README
+
 ## 1.0.0
 
 First release of `Address Map Links`: a note's address properties shown as clickable map links, right under the properties, in Reading view and Live Preview. Nothing is written into the note, so the link always follows the current values.
