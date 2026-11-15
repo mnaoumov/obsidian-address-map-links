@@ -3,10 +3,10 @@ import type {
   TFile
 } from 'obsidian';
 
+import { ComponentEx } from '@mnaoumov/obsidian-lib/components/component-ex';
 import { MonkeyAroundComponent } from '@mnaoumov/obsidian-lib/components/monkey-around-component';
 import { ViewType } from '@obsidian-typings/obsidian-public-latest/implementations';
 import {
-  Component,
   debounce,
   MarkdownView,
   parseLinktext
@@ -57,7 +57,7 @@ const REFRESH_DELAY_IN_MILLISECONDS = 50;
  *
  * Nothing is written into the note: every link is built from the current property values on each refresh.
  */
-export class AddressMapLinksComponent extends Component {
+export class AddressMapLinksComponent extends ComponentEx {
   private readonly app: App;
   private readonly blocks = new Map<MarkdownView, HTMLElement>();
   private readonly getSettings: () => AddressMapLinksSettings;
