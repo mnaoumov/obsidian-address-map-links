@@ -42,7 +42,7 @@ export async function openSecondSamplePerson(app: App, mode: 'preview' | 'source
  * change applies live -- no window reload, and no writing `data.json` behind a running plugin's back, which
  * it would overwrite from memory as it unloads.
  *
- * Manual equivalent: pick the provider in **Settings -> Community plugins -> Address Map Links**.
+ * Manual equivalent: pick the provider in **Settings -> Community plugins -> `Address Map Links`**.
  *
  * @param mapProvider - `googleMaps` or `openStreetMap`.
  */
