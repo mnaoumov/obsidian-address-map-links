@@ -24,13 +24,18 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginSettings> {
           f.createEl('br');
           appendCodeBlock(f, 'OpenStreetMap');
           f.appendText(' - OpenStreetMap search, in the browser.');
+          f.createEl('br');
+          appendCodeBlock(f, 'Apple Maps');
+          f.appendText(' - Apple Maps search. On iPhone, iPad and Mac it opens in the Maps app; on Windows and Android, in Apple Maps on the web.');
         }),
         name: 'Map provider',
         render: (setting) => {
           setting.addDropdown((dropdown) => {
             dropdown.addOptions({
               [MapProvider.GoogleMaps]: 'Google Maps',
-              [MapProvider.OpenStreetMap]: 'OpenStreetMap'
+              [MapProvider.OpenStreetMap]: 'OpenStreetMap',
+              // eslint-disable-next-line perfectionist/sort-objects -- The dropdown lists the options in this order.
+              [MapProvider.AppleMaps]: 'Apple Maps'
             });
             this.bind({ propertyName: 'mapProvider', valueComponent: dropdown });
           });

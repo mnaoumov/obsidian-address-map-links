@@ -10,6 +10,7 @@ Find them in Obsidian under **Settings → Community plugins → `Address Map Li
   - the map service an address link opens, shown in the settings tab as **Map provider**.
   - `googleMaps` (the default) opens a Google Maps search, which Android hands to the Maps app.
   - `openStreetMap` opens an OpenStreetMap search in the browser.
+  - `appleMaps` opens an Apple Maps search: the Maps app on iPhone, iPad and Mac, and Apple Maps on the web in the browser on Windows and Android.
 
 ## Try it
 

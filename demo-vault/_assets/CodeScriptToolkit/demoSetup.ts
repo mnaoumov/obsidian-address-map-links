@@ -44,9 +44,9 @@ export async function openSecondSamplePerson(app: App, mode: 'preview' | 'source
  *
  * Manual equivalent: pick the provider in **Settings -> Community plugins -> `Address Map Links`**.
  *
- * @param mapProvider - `googleMaps` or `openStreetMap`.
+ * @param mapProvider - `googleMaps`, `openStreetMap` or `appleMaps`.
  */
-export async function setMapProvider(app: App, mapProvider: 'googleMaps' | 'openStreetMap'): Promise<void> {
+export async function setMapProvider(app: App, mapProvider: 'appleMaps' | 'googleMaps' | 'openStreetMap'): Promise<void> {
   await configureCommunityPlugin({ app, pluginId: PLUGIN_ID, settings: { mapProvider } });
   new Notice(`mapProvider is now "${mapProvider}". It is live -- no reload needed.`);
 }

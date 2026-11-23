@@ -54,12 +54,13 @@ describe('PluginSettingsTab', () => {
     expect(bindSpy.mock.calls.map(([params]) => params.propertyName)).toStrictEqual(['mapProvider']);
     expect([...tab.containerEl.querySelectorAll(':scope select option')].map((option) => [option.getAttribute('value'), option.textContent])).toStrictEqual([
       [MapProvider.GoogleMaps, 'Google Maps'],
-      [MapProvider.OpenStreetMap, 'OpenStreetMap']
+      [MapProvider.OpenStreetMap, 'OpenStreetMap'],
+      [MapProvider.AppleMaps, 'Apple Maps']
     ]);
 
     const [definition] = definitions;
     const desc = definition && 'desc' in definition ? definition.desc : null;
     expect(desc).toBeInstanceOf(DocumentFragment);
-    expect([...castTo<DocumentFragment>(desc).querySelectorAll('code')].map((code) => code.textContent)).toStrictEqual(['Google Maps', 'OpenStreetMap']);
+    expect([...castTo<DocumentFragment>(desc).querySelectorAll('code')].map((code) => code.textContent)).toStrictEqual(['Google Maps', 'OpenStreetMap', 'Apple Maps']);
   });
 });

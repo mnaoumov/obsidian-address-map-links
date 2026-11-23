@@ -4,7 +4,7 @@
 
 A person's or a place's note often holds its address, but in Obsidian an address is just text: to see where it is you copy it into a map yourself. A plugin that writes a map link into the note fixes that once, and the stored link goes stale the moment the address changes.
 
-`Address Map Links` reads the address properties a note already has, such as `homeAddress` and `workAddress` with their `street`, `city` and `country`, and shows each one as a clickable map link right under the properties, in Reading view and Live Preview. Nothing is written into the note, so the link always follows the current values, and a `city` or `country` that links to a place note reads as that note's title. Google Maps by default, OpenStreetMap as a setting; on Android a Google Maps link opens the Maps app.
+`Address Map Links` reads the address properties a note already has, such as `homeAddress` and `workAddress` with their `street`, `city` and `country`, and shows each one as a clickable map link right under the properties, in Reading view and Live Preview. Nothing is written into the note, so the link always follows the current values, and a `city` or `country` that links to a place note reads as that note's title. Google Maps by default, OpenStreetMap or Apple Maps as a setting; on Android a Google Maps link opens the Maps app.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -43,7 +43,7 @@ A copy of the vault ships with every release. You can access it via any of the f
 2. **Partial addresses**: `street`, `city` and `country` are all optional, so a city and a country alone, or a street alone, still link.
 3. **Place notes**: a `city` or `country` that links to a note reads as that note's `title` property, or its name. A link to a note that does not exist reads as its own text. Rename a place note and Obsidian updates the links, so the map link follows.
 4. **Nothing stored**: the link is built from the current properties every time the note is shown. Disable the plugin and the note is still plain properties.
-5. **Map provider**: Google Maps or OpenStreetMap, switched live.
+5. **Map provider**: Google Maps, OpenStreetMap or Apple Maps, switched live. An Apple Maps link opens the Maps app on iPhone, iPad and Mac, and Apple Maps on the web elsewhere.
 
 Every setting is listed by its `data.json` key in [Settings](<./demo-vault/02 Settings.md>).
 

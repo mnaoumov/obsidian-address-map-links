@@ -59,7 +59,7 @@ The Properties panel does not edit nested objects; they are edited in Source mod
 ### The link
 
 - The query is `street, city, country`, the non-empty parts joined with a comma and a space.
-- Google Maps by default: `https://www.google.com/maps/search/?api=1&query=<url-encoded query>`. OpenStreetMap as the alternative provider setting: `https://www.openstreetmap.org/search?query=<url-encoded query>`.
+- Google Maps by default: `https://www.google.com/maps/search/?api=1&query=<url-encoded query>`. OpenStreetMap and Apple Maps as alternative provider settings: `https://www.openstreetmap.org/search?query=<url-encoded query>` and `https://maps.apple.com/search?query=<url-encoded query>`. The Apple form is the unified Maps URL (`/search` with `query`) Apple documents for iOS 18.4, macOS 15.4 and later. On a platform without the Maps app it opens Apple Maps on the web, which Apple supports in Chrome, Edge and Firefox on PCs and mobile devices (support.apple.com/120585, read 2026-11-23). That page does not name Android. The server returns the same web app to an Android Chrome user agent.
 - The link opens externally: the default browser on desktop, and on Android the system hands a Google Maps URL to the Maps app.
 - One link per address object, labelled by its type (`Home`, `Work`, or the key's prefix in sentence case for other types).
 
@@ -76,4 +76,5 @@ The Properties panel does not edit nested objects; they are edited in Source mod
 
 ### Settings
 
-- Map provider: Google Maps (default) or OpenStreetMap, an enum dropdown.
+- Map provider: Google Maps (default), OpenStreetMap or Apple Maps, an enum dropdown listed in that order.
+- The store screenshots still show the two-option dropdown until they are recaptured.
