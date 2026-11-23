@@ -3,6 +3,11 @@
  */
 export enum MapProvider {
   /**
+   * Apple Maps. On iPhone, iPad and Mac the system hands its URL to the Maps app; elsewhere it opens Apple Maps on the web.
+   */
+  AppleMaps = 'appleMaps',
+
+  /**
    * Google Maps. On Android the system hands its URL to the Maps app.
    */
   GoogleMaps = 'googleMaps',
@@ -23,6 +28,9 @@ export enum MapProvider {
 export function buildMapUrl(provider: MapProvider, query: string): string {
   const encodedQuery = encodeURIComponent(query);
   switch (provider) {
+    case MapProvider.AppleMaps: {
+      return `https://maps.apple.com/search?query=${encodedQuery}`;
+    }
     case MapProvider.GoogleMaps: {
       return `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
     }

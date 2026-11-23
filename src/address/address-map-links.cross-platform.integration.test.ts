@@ -184,6 +184,10 @@ describe('address map links', () => {
       const openStreetMap = await waitForState('the links after switching to OpenStreetMap', (state) => state.links[0]?.href.startsWith('https://www.openstreetmap.org/') === true);
       expect(openStreetMap.links[0]?.href).toBe('https://www.openstreetmap.org/search?query=11%20Downing%20Street%2C%20Big%20Smoke%2C%20United%20Kingdom');
 
+      await setMapProvider('Apple Maps');
+      const appleMaps = await waitForState('the links after switching to Apple Maps', (state) => state.links[0]?.href.startsWith('https://maps.apple.com/') === true);
+      expect(appleMaps.links[0]?.href).toBe('https://maps.apple.com/search?query=11%20Downing%20Street%2C%20Big%20Smoke%2C%20United%20Kingdom');
+
       await setMode('source');
       const backInLivePreview = await waitForState('the links back in Live Preview', (state) => state.mode === 'source' && state.parentClass === 'cm-sizer');
       expect(backInLivePreview.isAfterProperties).toBe(true);

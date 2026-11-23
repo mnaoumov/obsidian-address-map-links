@@ -11,6 +11,12 @@ import {
 } from './map-provider.ts';
 
 describe('buildMapUrl', () => {
+  it('builds an Apple Maps search URL with the address encoded', () => {
+    expect(buildMapUrl(MapProvider.AppleMaps, '1000 Fifth Ave, New York & Co')).toBe(
+      'https://maps.apple.com/search?query=1000%20Fifth%20Ave%2C%20New%20York%20%26%20Co'
+    );
+  });
+
   it('builds a Google Maps search URL with the address encoded', () => {
     expect(buildMapUrl(MapProvider.GoogleMaps, 'Ángel Urraza 1201 local 3, Mexico City')).toBe(
       'https://www.google.com/maps/search/?api=1&query=%C3%81ngel%20Urraza%201201%20local%203%2C%20Mexico%20City'
