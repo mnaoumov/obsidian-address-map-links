@@ -55,15 +55,19 @@ The Properties panel does not edit an object value. Edit addresses in Source mod
 
 | Plugin | Features | How `Address Map Links` differs |
 | --- | --- | --- |
+| [`Beautiful Contact Cards`](https://community.obsidian.md/plugins/beautiful-contact-cards) | renders a contact card from a person's properties, a one-line address and past addresses included | Narrower than it, and only for addresses: links each address to a map; reads any `<type>Address` object, with place-note links for `city` and `country` |
 | [`Corduroy`](https://community.obsidian.md/plugins/corduroy) | searches Google Maps and stores the chosen place's coordinates in the frontmatter | Different step: reads addresses you already keep and stores nothing; no search and no coordinates |
 | [`Geo Capture`](https://community.obsidian.md/plugins/geo-capture) | captures places, coordinates, map links and photo GPS into travel notes | Different step: renders a link live from address properties instead of capturing data into the note |
 | [`Geocode Note`](https://community.obsidian.md/plugins/geocode-note) | looks up an address or the current location and adds coordinates, an icon and a color to the note | Different step: no lookup and nothing written; links the address as text to a map search |
 | [`Geocoding Properties`](https://github.com/kepano/obsidian-geocoding-properties) (unlisted) | inserts address and location data from geocoding APIs as properties, map link included, on a command | Same goal as its map link: built when the note is read, so it never goes stale; no geocoding API and no key |
 | [`Map Note`](https://community.obsidian.md/plugins/map-note) | adds location notes for the Bases Map view to render | Complements it: one link per address on the note itself, no map view |
 | [`Map View`](https://community.obsidian.md/plugins/obsidian-map-view) | an interactive map of the notes that carry coordinates | Complements it: no map inside Obsidian and no coordinates; opens the address in a map service |
+| [`Mapbox Location Image`](https://community.obsidian.md/plugins/mapbox-location) | renders a Mapbox map image for coordinates or a search term in a `location` code block | Different step: no code block, no image and no API key; links the note's address properties to a map service |
 | [`Maps`](https://community.obsidian.md/plugins/maps) | a Bases map layout that shows notes as markers | Complements it: needs no coordinates; links each address property to a map search |
+| [`Places`](https://community.obsidian.md/plugins/places) | interactive maps with markers, tracks, overlays, search and directions, through provider plugins | Complements it: no map inside Obsidian and no provider to set up; one link per address on the note itself |
+| [`Wayfarer`](https://community.obsidian.md/plugins/wayfarer) | trip planning beside a map, with pasted Google Maps links as stops and headings as days | Different step: no trip, no map view and no pasted links; links the address properties a note already has |
 
-Last searched for similar plugins on 2026-11-01.
+Last searched for similar plugins on 2026-11-23.
 
 ## Installation
 
