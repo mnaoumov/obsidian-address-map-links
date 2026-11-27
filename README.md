@@ -33,7 +33,7 @@ A person's or a place's note often holds its address, but in Obsidian an address
 
 A copy of the vault ships with every release. You can access it via any of the following:
 
-1. Running the **`Address Map Links`: Open demo vault** command.
+1. Running the **`Address Map Links`: Open demo vault** command, on desktop. The command is not available on mobile, so use the next option there.
 2. Downloading `address-map-links-demo-vault.zip` from the [Releases](https://github.com/mnaoumov/obsidian-address-map-links/releases). It unzips into a single `address-map-links-demo-vault-<version>` folder.
 3. Browsing its source in [`demo-vault/`](./demo-vault/README.md) in this repository.
 
