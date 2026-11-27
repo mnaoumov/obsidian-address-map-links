@@ -77,4 +77,3 @@ The Properties panel does not edit nested objects; they are edited in Source mod
 ### Settings
 
 - Map provider: Google Maps (default), OpenStreetMap or Apple Maps, an enum dropdown listed in that order.
-- The store screenshots still show the two-option dropdown until they are recaptured.

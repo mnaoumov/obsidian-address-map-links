@@ -15,10 +15,10 @@ A person's or a place's note often holds its address, but in Obsidian an address
 
 <div>
 <a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-desktop-2.png"><img src="images/screenshots/screenshot-desktop-2.png" alt="A custom address type, a street alone and a link to a missing note" width="600"></a>
-<a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-desktop-3.png"><img src="images/screenshots/screenshot-desktop-3.png" alt="Choose Google Maps or OpenStreetMap" width="600"></a>
+<a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-desktop-3.png"><img src="images/screenshots/screenshot-desktop-3.png" alt="Choose Google Maps, OpenStreetMap or Apple Maps" width="600"></a>
 <a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-mobile-1.png"><img src="images/screenshots/screenshot-mobile-1.png" alt="Address properties shown as map links under the properties" width="270"></a>
 <a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-mobile-2.png"><img src="images/screenshots/screenshot-mobile-2.png" alt="A custom address type, a street alone and a link to a missing note" width="270"></a>
-<a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-mobile-3.png"><img src="images/screenshots/screenshot-mobile-3.png" alt="Choose Google Maps or OpenStreetMap" width="270"></a>
+<a href="https://github.com/mnaoumov/obsidian-address-map-links/blob/HEAD/images/screenshots/screenshot-mobile-3.png"><img src="images/screenshots/screenshot-mobile-3.png" alt="Choose Google Maps, OpenStreetMap or Apple Maps" width="270"></a>
 </div>
 
 </details>
