@@ -145,7 +145,7 @@ describe('desktop store screenshots', () => {
 
   it('3 - the settings tab', { timeout: TEST_TIMEOUT_IN_MILLISECONDS }, async () => {
     expect(await stage('settings')).toBe('settings');
-    await shoot(3, 'Choose Google Maps or OpenStreetMap');
+    await shoot(3, 'Choose Google Maps, OpenStreetMap or Apple Maps');
   });
 }); /**
  * Captures the window, captions it, and writes it as `images/screenshots/screenshot-desktop-<index>.png`.
